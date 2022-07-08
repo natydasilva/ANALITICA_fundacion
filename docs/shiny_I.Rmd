@@ -62,22 +62,22 @@ webpage: http://natydasilva.com
 
 ## <span style="color:#88398A"> Sobre la charla </span> 
 
-- Slides: https://natydasilva.github.io/ISI_workshop/
+- Slides: 
 
 
-- Monday 22 to Wednesday 24, 9:00 to 11:30 UTC-3 
- 
-  - Session 1: 09.00 – 10.30 
-  
-  - Session 2: 10.45 – 11.30
+- Introducción a shiny
+
+- Problema aplicado a datos edducativos
+
+- Shiny app como monitor de uso de plataformas educativas
 
 
 
 ---
 
-## <span style="color:#88398A"> Qué es `shiny`? </span>
+## <span style="color:#88398A"> ¿Qué es `shiny`? </span>
 
- - `shiny` es un paquete de R que nos permite crear applicaciones interactivas web
+ - `shiny` es un paquete de R que nos permite crear aplicaciones interactivas web
  
  - Uno puede crear aplicaciones web complicadas sin saber, HTML, JavaScript o CSS.
  
