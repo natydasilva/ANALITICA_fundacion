@@ -107,9 +107,9 @@ webpage: http://natydasilva.com
 
 En `shiny` trabajamos en dos códigos separados, el `ui` y el `server`.
 
-- `ui`: "user interface" (interface de usuario), documento web en html (no necesito saber html lo hago desde R). Define como se ve la app, diseño de la misma (the front end) .
+- `ui`: "user interface" (interface de usuario), documento web en html, no necesito saber html lo hago desde R. Define como se ve la app, diseño de la misma (the front end) .
 
-- `server`: Define como la app funciona. Conjunto de instrucciones seguidas por el servidor cuando cambia el `input`(the back end).
+- `server`: Define como la app funciona. Conjunto de instrucciones seguidas por el servidor cuando cambia el `input` (the back end).
 
 - Las expresiones reactivas son el tercer componente clave.
  
@@ -163,8 +163,8 @@ ui <- fluidPage(
    # Barra lateral con control deslizante para el número de bins 
    sidebarLayout(
       sidebarPanel(
-         sliderInput("bins",
-                     "Número de bins:",
+         sliderInput(inputId = "bins",
+                     label = "Número de bins:",
                      min = 1,
                      max = 50,
                      value = 30)
@@ -172,7 +172,7 @@ ui <- fluidPage(
       
       # Muestro el gráfico de la distribución generada
       mainPanel(
-         plotOutput("distPlot")
+         plotOutput(outputId = "distPlot")
       )
    )
 )
@@ -184,7 +184,8 @@ ui <- fluidPage(
 
 ```{r, eval=FALSE}
 
-# Definimos en el server la lógica requerida para dibujar el histograma
+# Definimos en el server la lógica requerida para dibujar 
+# el histograma
 server <- function(input, output) {
    
    output$distPlot <- renderPlot({
@@ -438,14 +439,7 @@ Si seguimos estas reglas la shiny va a usar los Inputs para crear Outputs reacti
 ---
 
 
-<!-- ## <span style="color:#88398A">Tu Turno, Actividad 11 </span> -->
-<!-- Subir a su repo -->
 
-<!-- 1) Modificá la shiny para que el histograma sea un ggplot2 -->
-
-<!-- 2)  Agregá un input para cambiar la media y el desvío standard -->
-
-<!-- 3)  Agregá  un input para simular de una distribución gamma `rgamma` y una normal. -->
 
 
 ## <span style="color:#88398A">Ejemplo de aplicación con datos educativos</span>
