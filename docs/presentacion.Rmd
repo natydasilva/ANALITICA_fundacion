@@ -452,7 +452,7 @@ Si seguimos estas reglas la shiny va a usar los Inputs para crear Outputs reacti
 
 Plan Ceibal en Uruguay:
 
-- Se implementa en Uruguay como política pública de carácter universal el Plan Ceibal que forma parte de la iniciativa mundial One Laptop per Child (OLPC), 2005 (computadoras para el sitema educativo). 
+- Se implementa en Uruguay 2010 como política pública de carácter universal el Plan Ceibal que forma parte de la iniciativa mundial One Laptop per Child (OLPC, 2005),  (computadoras para el sitema educativo). 
 
 
 - Plan Ceibal ha implementado el “modelo uno a uno” que consiste en otorgar un dispositivo (laptop o tablet) a cada alumno y docente de la enseñanza pública básica (Educación Inicial y Primaria, y Educación Media Básica). 
@@ -475,11 +475,13 @@ Plan Ceibal en Uruguay:
 
 ## <span style="color:#88398A">Monitor de uso de plataformas educativas con shiny </span>
 
-- Se recibe un conjunto de datos con formato longitudinal donde cada observación (cada fila) contiene la información del total de actividad realizada por el alumno en cada día que tiene alguna actividad. Son 1.355.972 registros correspondientes a 120276 alumnos de los cuales 87915 tienen alguna actividad.
+- Se recibe un conjunto de datos con formato longitudinal donde cada observación (cada fila) contiene la información del total de actividad realizada por el alumno en cada día que tiene alguna actividad.
 
--  77 variables,  30 refieren a alguna interacción del estudiante con la plataforma CREA que pueden ser catalogadas como: nivel de actividad (ejemplo, días de ingreso), actividad en los foros (comentarios posteados), envío de tareas (envíos calificables) y medidas generales como el total de ingresos a la plataforma. 
+- Son 1.355.972 registros correspondientes a 120276 alumnos de los cuales 87915 tienen alguna actividad.
 
-- Tb variables de características del alumno, por ejemplo, el sexo, la fecha de nacimiento, el curso, grado y grupo, relacionadas al centro de estudio, como el contexto socioeconómico (por quintiles, según definición de CEIBAL), la zona geográfica (urbana o rural), el departamento y la localidad.
+-  77 variables, interacción del estudiante con la plataforma CREA, nivel de actividad (ejemplo, días de ingreso), actividad en los foros (comentarios posteados), envío de tareas (envíos calificables) y medidas generales como el total de ingresos a la plataforma. 
+
+- Otras variables de características del alumno, (sexo, edad,  grado, o, contexto socioeconómico del centro,  departamento, localidad).
 
 - A su vez se cuenta con información del dispositivo y el tipo de conexión a internet.
 
@@ -490,14 +492,16 @@ Plan Ceibal en Uruguay:
 
 ## <span style="color:#88398A">Monitor de uso de plataformas educativas con shiny </span>
 
-- Indice de Engagement  (EI), Marconi, C. \& Goyeneche, J. (2016). 
+- Indice de Engagement, medida de la intensidad y regularidad en el uso de la plataforma.    
+. 
 
 <!-- Se calculan indicadores de compromiso (índice de engagement) que combina información de cr_comentariosposteados, cr_comentariosposteadosassignmen, cr_totalcomentariosposteados, cr_totalsubmissions, cr_totalvisitas, cr_totaldiasingreso, cr_comentariosdiscusiones. -->
-- Medida de la intensidad y regularidad en el uso de la plataforma.    
 
 -  Acotado $[0,1]$.
 
 -  Valores positivos indican uso de la plataforma.
+
+Shiny app:
 
 http://164.73.240.157:3838/App-Ceibal/
 ---
